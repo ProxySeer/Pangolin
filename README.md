@@ -1,109 +1,159 @@
 # Pangolin Security
 
-**Pangolin**, dosyalarınızı güvenli şekilde şifrelemek, çözmek ve şifreli dosyaları diske açmadan önizlemek için geliştirilmiş bir güvenlik uygulamasıdır.
+**Pangolin** is a security application designed to encrypt, decrypt and securely preview your files without permanently decrypting them onto the hard drive.
 
-Bu proje, yaklaşık 6 yıl önce geliştirilen **VTCrypt** fikrinin daha sade, daha modern ve eklenti destekli yeni versiyonudur.
+This project is the modern evolution of an older application called **VTCrypt**, originally developed around 6 years ago, now rebuilt with a simpler architecture, plugin support and advanced Ghost View technology.
 
-## Nedir?
+---
 
-Pangolin ile tüm dosyalarınızı şifreleyebilir, `.encx` formatında saklayabilir ve desteklenen dosyaları **Ghost View** özelliği ile HDD üzerine decrypt etmeden önizleyebilirsiniz.
+# What is Pangolin?
 
-Ghost View sayesinde dosya geçici olarak dışarı çıkarılmaz; mümkün olan senaryolarda içerik doğrudan güvenli görüntüleme katmanında açılır.
+Pangolin allows you to encrypt files and folders into the `.encx` format and preview supported encrypted content directly through **Ghost View** technology.
 
-## Özellikler
+With Ghost View, files can be viewed without being fully extracted or permanently decrypted onto the disk whenever possible.
 
-- Dosya ve klasör şifreleme
-- Şifreli dosya çözme
-- `.encx` dosya formatı
-- Drag & Drop ile hızlı kullanım
-- Session Master Password desteği
-- Quick Encrypt / Quick Decrypt desteği
-- Ghost View ile şifreli dosya önizleme
-- Plugin tabanlı mimari
-- Windows context menu entegrasyonu
-- Tek EXE içine güvenli paketleme
-- Paket içeriğini dışarı çıkarmadan önizleme
+Supported content includes:
 
-## Mevcut Pluginler
+- Videos
+- Audio files
+- Office documents
+- PDFs
+- Images
+- And many common file formats
 
-### Pangolin Media Player Plugin
+---
 
-Şifrelenmiş medya dosyalarını decrypt etmeden Ghost View ile doğrudan oynatmanızı sağlar.
+# Features
 
-Desteklenen içerikler:
+- File & folder encryption
+- Secure decryption
+- `.encx` encrypted file format
+- Drag & Drop support
+- Session-based Master Password
+- Quick Encrypt / Quick Decrypt
+- Ghost View secure preview system
+- Plugin-based architecture
+- Windows shell integration
+- Secure standalone EXE packaging
+- Preview packed files without extraction
 
-- Video dosyaları
-- Ses dosyaları
-- Yaygın medya formatları
+---
 
-### Pangolin Shell Plugin
+# Available Plugins
 
-Windows sağ tık menüsü entegrasyonu sağlar.
+## Pangolin Media Player Plugin
 
-Bu plugin ile dosyalar üzerinde doğrudan:
+Allows encrypted media files to be played directly using Ghost View technology without permanently decrypting them.
+
+Supported content:
+
+- Video files
+- Audio files
+- Common multimedia formats
+
+---
+
+## Pangolin Shell Plugin
+
+Provides Windows right-click context menu integration.
+
+You can directly:
 
 - Encrypt
 - Decrypt
-- Ghost View
+- Ghost Preview
 
-işlemleri yapılabilir.
+files from Windows Explorer.
 
-> Not: Bu plugin Windows shell entegrasyonu yaptığı için admin yetkisi gerektirir.
+> Note: This plugin requires administrator privileges because it integrates with the Windows shell.
 
-### Pangolin Packer Plugin
+---
 
-Dosyalarınızı bir vault mantığıyla tek bir EXE içine güvenli şekilde paketler.
+## Pangolin Packer Plugin
 
-Paketlenen dosyalar:
+Works like a secure vault system.
 
-- Şifreli olarak saklanır
-- Dışarı açılmadan önizlenebilir
-- Parola olmadan çalıştırılamaz
-- Hedef bilgisayarda ilgili uygulama kurulu olmasa bile görüntülenebilir
+It can package encrypted files into a single standalone EXE file.
 
-Örneğin Word, Excel veya PDF dosyalarını paketlediğinizde Pangolin size tek bir EXE oluşturur. Bu EXE parola ile açılır ve desteklenen dosyalar Ghost View ile görüntülenebilir.
+Packed files:
 
-## Kullanım Senaryoları
+- Remain encrypted
+- Require a password to open
+- Can be previewed without extraction
+- Do not require the target system to have Office, PDF readers or other applications installed
 
-- Kişisel dosyaları güvenli saklama
-- USB disklerde şifreli arşiv taşıma
-- Medya dosyalarını güvenli izleme
-- Belgeleri dışarı açmadan önizleme
-- Tek EXE halinde güvenli dosya paylaşımı
-- Office veya PDF okuyucu olmayan bilgisayarlarda güvenli görüntüleme
+For example:
 
-## Güvenlik Yaklaşımı
+You can package Word, Excel or PDF files into a single protected EXE.  
+When opened with the correct password, Pangolin can preview the content using Ghost View technology even on systems without Office installed.
 
-Pangolin’in temel amacı, dosyaların mümkün olduğunca diske açık halde yazılmadan işlenmesidir.
+---
 
-Özellikle Ghost View ve Packer özellikleri, hassas dosyaların geçici klasörlere açık şekilde çıkarılmasını azaltmak için tasarlanmıştır.
+# Use Cases
 
-## Proje Durumu
+- Secure personal file storage
+- Encrypted USB archives
+- Secure media playback
+- Preview documents without extraction
+- Share protected standalone EXE vaults
+- Open encrypted documents on systems without installed software
 
-Bu proje aktif geliştirme aşamasındadır.
+---
 
-Mevcut ana bileşenler:
+# Security Philosophy
 
-- Pangolin Security ana uygulaması
+Pangolin is designed to minimize situations where decrypted files are written openly to the disk.
+
+Ghost View and Packer technologies aim to securely process sensitive content in memory whenever possible.
+
+---
+
+# Project Status
+
+Pangolin is currently under active development.
+
+Main components include:
+
+- Pangolin Security core application
 - Media Player Plugin
 - Shell Plugin
 - Packer Plugin
-- Ghost View altyapısı
-- Plugin yönetim sistemi
+- Ghost View system
+- Plugin management infrastructure
 
-## Planlanan Özellikler
+---
 
-- Daha fazla dosya tipi için Ghost View desteği
-- Gelişmiş paketleme seçenekleri
-- Daha güçlü plugin API
-- Daha iyi işlem kuyruğu ve progress ekranı
-- Otomatik plugin güncelleme sistemi
-- Daha gelişmiş güvenlik logları
+# Planned Features
 
-## Lisans
+- More Ghost View file format support
+- Advanced vault packaging
+- Extended Plugin SDK
+- Improved queue & progress system
+- Automatic plugin updater
+- Advanced security logging
 
-Lisans bilgisi daha sonra eklenecektir.
+---
 
-## Uyarı
+# Technologies
 
-Pangolin güvenlik odaklı bir uygulamadır. Parolanızı unutmanız durumunda şifrelenmiş dosyalarınızı geri getirmeniz mümkün olmayabilir.
+- C#
+- .NET
+- WinForms
+- Plugin-based architecture
+- FFmpeg
+- SharpShell
+- Flyleaf Media Engine
+
+---
+
+# Warning
+
+Pangolin is a security-focused application.
+
+If you forget your password, encrypted data may become unrecoverable.
+
+---
+
+# License
+
+License information will be added later.
