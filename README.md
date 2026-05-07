@@ -42,7 +42,7 @@ Whenever possible, Pangolin processes sensitive content directly in memory for i
 
 - 🔒 File & folder encryption
 - 🔓 Secure decryption
-- 📁 `.encx` encrypted file format
+- 📁 `.pgl` encrypted file format
 - 🖱️ Drag & Drop support
 - 🔑 Session-based Master Password
 - ⚡ Quick Encrypt / Quick Decrypt
